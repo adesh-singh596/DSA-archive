@@ -1,2 +1,2 @@
 # LeetCode Solutions
-Here I will be pasting the solution of the leetcode questions.
+Here I will be adding the solution of the leetcode questions.
