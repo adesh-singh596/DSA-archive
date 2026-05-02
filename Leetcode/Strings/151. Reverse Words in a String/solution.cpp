@@ -1,3 +1,5 @@
+//Learnt to use pop_back function to remove the last added element
+
 //Approach: Two Pointers
 /*
 1. Take two pointers, wrb and wre, to keep track of the beginning and end of a word.
@@ -17,7 +19,7 @@ public:
         {
             if(s[i]==' '||i==0)
             {
-                wrb=(s[i]==' ')?i+1:i;
+                wrb=(s[i]==' ')?i+1:i;    //wrb is i+i in all cases and it handles the edge case when i=0.
                 if(wrb<=wre)
                 {
                     for(int j=wrb;j<=wre;j++)
@@ -27,10 +29,10 @@ public:
                     ans+=' ';
                 }
                 wre=i-1;
-                while(wre>0&&s[wre]==' ')    wre--;
+                while(wre>=0&&s[wre]==' ')    wre--;    //checks if the wre in inside the bound before decrementing it
             }
         }
-        if(!ans.empty()&&ans.back()==' ')     ans.pop_back();
+        if(!ans.empty()&&ans.back()==' ')     ans.pop_back();    
         return ans;
     }
 };
